@@ -1,6 +1,6 @@
-import 'dotenv/config';
+import "dotenv/config";
 
-const required = ['PORT', 'MONGO_URI', 'JWT_SECRET', 'JWT_EXPIRES_IN'];
+const required = ["PORT", "MONGO_URI", "JWT_SECRET", "JWT_EXPIRES_IN"];
 
 for (const key of required) {
   if (!process.env[key]) {

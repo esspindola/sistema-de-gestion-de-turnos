@@ -9,7 +9,7 @@ export async function findProfessionalById(id) {
 }
 
 export async function findProfessionalsBySpecialty(specialty) {
-  return Professional.find({ specialty: new RegExp(specialty, 'i') });
+  return Professional.find({ specialty }).collation({ locale: 'es', strength: 1 });
 }
 
 export async function createProfessional(data) {
